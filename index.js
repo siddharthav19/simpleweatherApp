@@ -16,7 +16,7 @@ form.addEventListener('submit',(e)=>{
     form.reset();
     getData(`https://api.weatherapi.com/v1/current.json?key=f866fa64e08b454e9f7172552222905&q=${val}&aqi=yes`).then((data)=>{
         document.querySelector('.location').textContent = `Location : ${data.location.name} , ${data.location.country}`;
-        document.querySelector('.temperature').textContent = `Temperature : ${data.current.temp_c} DegC`;
+        document.querySelector('.temperature').textContent = `Temperature : ${data.current.temp_c} &deg;C`;
 
 
     }).catch(()=>{
